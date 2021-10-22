@@ -1,0 +1,50 @@
+td {
+    width: 45px;
+    height: 45px;
+}
+
+table {
+    margin: 5px auto;
+}
+
+.vert {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.hori {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.left {
+    border-left: 4px solid black;
+}
+
+.bottom {
+    border-bottom: 4px solid black;
+}
+
+.right {
+    border-right: 4px solid black;
+}
+
+.top {
+    border-top: 4px solid black;
+}
+
+button {
+    height: 45px;
+    width: 45px;
+    font-size: 18px;
+}
+
+h2 {
+    text-align: center;
+    align-content: center;
+}
+
+#startNewGame {
+    height: 30px;
+    width: 165px;
+}

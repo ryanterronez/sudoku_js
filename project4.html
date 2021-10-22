@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="project4.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="project4.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <h1>Sudoku</h1>
+        <h2><button id="startNewGame">Start New Game</button></h2>
+        <div class="col">Current number
+            <div id="currentNumber">9</div>
+        </div>
+        <table id="numberChooser">
+            <tr id="" class="">
+                <td id="0" class=""><button class="number"></button></td>
+                <td id="1" class=""><button class="number">1</button></td>
+                <td id="2" class=""><button class="number">2</button></td>
+                <td id="3" class=""><button class="number">3</button></td>
+                <td id="4" class=""><button class="number">4</button></td>
+                <td id="5" class=""><button class="number">5</button></td>
+                <td id="6" class=""><button class="number">6</button></td>
+                <td id="7" class=""><button class="number">7</button></td>
+                <td id="8" class=""><button class="number">8</button></td>
+                <td id="9" class=""><button class="number bg-primary text-white">9</button></td>
+    </div>
+    <div>
+        <div class="row justify-content-center">
+            <div>
+                <div>
+                    <table id="gameBoard">
+                        <tr id="tr1" class="top">
+                            <td id="sq11" class="box1 row1 vert hori left"><button></button></td>
+                            <td id="sq12" class="box1 row1 vert hori"><button></button></td>
+                            <td id="sq13" class="box1 row1 vert hori right"><button></button></td>
+                            <td id="sq14" class="box2 row1 vert hori"><button></button></td>
+                            <td id="sq15" class="box2 row1 vert hori"><button></button></td>
+                            <td id="sq16" class="box2 row1 vert hori right"><button></button></td>
+                            <td id="sq17" class="box3 row1 vert hori"><button></button></td>
+                            <td id="sq18" class="box3 row1 vert hori"><button></button></td>
+                            <td id="sq19" class="box3 row1 vert hori right"><button></button></td>
+                        <tr id="tr2">
+                            <td id="sq21" class="box1 row2 vert hori left"><button></button></td>
+                            <td id="sq22" class="box1 row2 vert hori"><button></button></td>
+                            <td id="sq23" class="box1 row2 vert hori right"><button></button></td>
+                            <td id="sq24" class="box2 row2 vert hori"><button></button></td>
+                            <td id="sq25" class="box2 row2 vert hori"><button></button></td>
+                            <td id="sq26" class="box2 row2 vert hori right"><button></button></td>
+                            <td id="sq27" class="box3 row2 vert hori"><button></button></td>
+                            <td id="sq28" class="box3 row2 vert hori"><button></button></td>
+                            <td id="sq29" class="box3 row2 vert hori right"><button></button></td>
+                        <tr id="tr3" class="bottom">
+                            <td id="sq31" class="box1 row3 vert hori left"><button></button></td>
+                            <td id="sq32" class="box1 row3 vert hori"><button></button></td>
+                            <td id="sq33" class="box1 row3 vert hori right"><button></button></td>
+                            <td id="sq34" class="box2 row3 vert hori"><button></button></td>
+                            <td id="sq35" class="box2 row3 vert hori"><button></button></td>
+                            <td id="sq36" class="box2 row3 vert hori right"><button></button></td>
+                            <td id="sq37" class="box3 row3 vert hori"><button></button></td>
+                            <td id="sq38" class="box3 row3 vert hori"><button></button></td>
+                            <td id="sq39" class="box3 row3 vert hori right"><button></button></td>
+                        <tr id="tr4">
+                            <td id="sq41" class="box4 row4 vert hori left"><button></button></td>
+                            <td id="sq42" class="box4 row4 vert hori"><button></button></td>
+                            <td id="sq43" class="box4 row4 vert hori right"><button></button></td>
+                            <td id="sq44" class="box5 row4 vert hori"><button></button></td>
+                            <td id="sq45" class="box5 row4 vert hori"><button></button></td>
+                            <td id="sq46" class="box5 row4 vert hori right"><button></button></td>
+                            <td id="sq47" class="box6 row4 vert hori"><button></button></td>
+                            <td id="sq48" class="box6 row4 vert hori"><button></button></td>
+                            <td id="sq49" class="box6 row4 vert hori right"><button></button></td>
+                        <tr id="tr5">
+                            <td id="sq51" class="box4 row5 vert hori left"><button></button></td>
+                            <td id="sq52" class="box4 row5 vert hori"><button></button></td>
+                            <td id="sq53" class="box4 row5 vert hori right"><button></button></td>
+                            <td id="sq54" class="box5 row5 vert hori"><button></button></td>
+                            <td id="sq55" class="box5 row5 vert hori"><button></button></td>
+                            <td id="sq56" class="box5 row5 vert hori right"><button></button></td>
+                            <td id="sq57" class="box6 row5 vert hori"><button></button></td>
+                            <td id="sq58" class="box6 row5 vert hori"><button></button></td>
+                            <td id="sq59" class="box6 row5 vert hori right"><button></button></td>
+                        <tr id="tr6" class="bottom">
+                            <td id="sq61" class="box4 row6 vert hori left"><button></button></td>
+                            <td id="sq62" class="box4 row6 vert hori"><button></button></td>
+                            <td id="sq63" class="box4 row6 vert hori right"><button></button></td>
+                            <td id="sq64" class="box5 row6 vert hori"><button></button></td>
+                            <td id="sq65" class="box5 row6 vert hori"><button></button></td>
+                            <td id="sq66" class="box5 row6 vert hori right"><button></button></td>
+                            <td id="sq67" class="box6 row6 vert hori"><button></button></td>
+                            <td id="sq68" class="box6 row6 vert hori"><button></button></td>
+                            <td id="sq69" class="box6 row6 vert hori right"><button></button></td>
+                        <tr id="tr7">
+                            <td id="sq71" class="box7 row7 vert hori left"><button></button></td>
+                            <td id="sq72" class="box7 row7 vert hori"><button></button></td>
+                            <td id="sq73" class="box7 row7 vert hori right"><button></button></td>
+                            <td id="sq74" class="box8 row7 vert hori"><button></button></td>
+                            <td id="sq75" class="box8 row7 vert hori"><button></button></td>
+                            <td id="sq76" class="box8 row7 vert hori right"><button></button></td>
+                            <td id="sq77" class="box9 row7 vert hori"><button></button></td>
+                            <td id="sq78" class="box9 row7 vert hori"><button></button></td>
+                            <td id="sq79" class="box9 row7 vert hori right"><button></button></td>
+                        <tr id="tr8">
+                            <td id="sq81" class="box7 row8 vert hori left"><button></button></td>
+                            <td id="sq82" class="box7 row8 vert hori"><button></button></td>
+                            <td id="sq83" class="box7 row8 vert hori right"><button></button></td>
+                            <td id="sq84" class="box8 row8 vert hori"><button></button></td>
+                            <td id="sq85" class="box8 row8 vert hori"><button></button></td>
+                            <td id="sq86" class="box8 row8 vert hori right"><button></button></td>
+                            <td id="sq87" class="box9 row8 vert hori"><button></button></td>
+                            <td id="sq88" class="box9 row8 vert hori"><button></button></td>
+                            <td id="sq89" class="box9 row8 vert hori right"><button></button></td>
+                        <tr id="tr9" class="bottom">
+                            <td id="sq91" class="box7 row9 vert hori left "><button></button></td>
+                            <td id="sq92" class="box7 row9 vert hori"><button></button></td>
+                            <td id="sq93" class="box7 row9 vert hori right"><button></button></td>
+                            <td id="sq94" class="box8 row9 vert hori"><button></button></td>
+                            <td id="sq95" class="box8 row9 vert hori"><button></button></td>
+                            <td id="sq96" class="box8 row9 vert hori right"><button></button></td>
+                            <td id="sq97" class="box9 row9 vert hori"><button></button></td>
+                            <td id="sq98" class="box9 row9 vert hori"><button></button></td>
+                            <td id="sq99" class="box9 row9 vert hori right"><button></button></td>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
